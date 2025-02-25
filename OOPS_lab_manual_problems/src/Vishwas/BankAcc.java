@@ -17,12 +17,12 @@ public class BankAcc {
 	public BankAcc(String Name,int Acc_no,String Type_acc,int Bal,int acc_number) {
 		if(acc_number == Acc_no)
 		{
-			System.out.print("Hi");
+			name = Name;
+			acc_no = Acc_no;
+			type_acc = Type_acc;
+			bal = Bal;
+			System.out.print("Hi " + name + "\nWelcome to XXX bank\n" + "Your account number :" + acc_no + "\nYour account type : " + type_acc + "\nYour Current balance : " + bal);
 		}
-		name = Name;
-		acc_no = Acc_no;
-		type_acc = Type_acc;
-		bal = Bal;
 	}
 	
 	public static void main(String[] args) {
@@ -32,6 +32,7 @@ public class BankAcc {
 		BankAcc depositor1 = new BankAcc("Navneet",245805426,"Savings",3000,acc_number);
 		BankAcc depositor2 = new BankAcc("Vishwas",245805014,"Savings",4000,acc_number);
 		BankAcc depositor3 = new BankAcc("Tarun",245805000,"Savings",500,acc_number);
+
 		
 
 	}
