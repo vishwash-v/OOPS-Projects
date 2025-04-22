@@ -1,4 +1,4 @@
-package Question1;
+
 import java.util.*;
 
 class Payment{
