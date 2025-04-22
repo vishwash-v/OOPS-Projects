@@ -20,13 +20,13 @@ class Payment{
 		if(cvv == 123) {
 			System.out.println("Payment Succesful Through Debit Card");
 			System.out.println("\n Receipt Details");
-			System.out.print("----------------------------------------------------------------------");
+			System.out.println("----------------------------------------------------------------------");
 			System.out.println("Amount of " + am + " has been debited from your Account");
-			System.out.print("Paid To :" + pt);
-			System.out.print("By Card number : " + num);
-			System.out.print("Expire month : " + month);
-			System.out.print("Expire year : " + year);
-			System.out.print("-----------------------------------------------------------------------");
+			System.out.println("Paid To :" + pt);
+			System.out.println("By Card number : " + num);
+			System.out.println("Expire month : " + month);
+			System.out.println("Expire year : " + year);
+			System.out.println("-----------------------------------------------------------------------");
 		}else {
 			System.out.print("Payment failed");
 		}
