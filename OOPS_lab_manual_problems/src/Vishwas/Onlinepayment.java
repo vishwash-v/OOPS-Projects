@@ -3,7 +3,7 @@ import java.util.*;
 
 class Payment{
 	static String pt = "Online shopping website";
-	void processPayment(double num,int am,int pin){
+	void processPayment(long num,int am,int pin){
 		if(pin == 1234) {
 			System.out.println("Payment Succesful Through UPI");
 			System.out.println("\n Receipt Details");
@@ -16,7 +16,7 @@ class Payment{
 			System.out.print("Payment failed");
 		}
 	}
-	void processPayment(double num,int am,int cvv,int year,int month){
+	void processPayment(long num,int am,int cvv,int year,int month){
 		if(cvv == 123) {
 			System.out.println("Payment Succesful Through Debit Card");
 			System.out.println("\n Receipt Details");
@@ -31,17 +31,17 @@ class Payment{
 			System.out.print("Payment failed");
 		}
 	}
-	void processPayment(String name,double num,int am,int cvv,int year,int month){
+	void processPayment(String name,long num,int am,int cvv,int year,int month){
 		if(cvv == 123) {
 			System.out.println("Payment Succesful Through Credit Card");
 			System.out.println("\n Receipt Details");
-			System.out.print("----------------------------------------------------------------------");
+			System.out.println("----------------------------------------------------------------------");
 			System.out.println("Amount of " + am + " has been debited from your Account");
-			System.out.print("Paid To :" + pt);
-			System.out.print("By Card number : " + num);
-			System.out.print("Expire month : " + month);
-			System.out.print("Expire year : " + year);
-			System.out.print("-----------------------------------------------------------------------");
+			System.out.println("Paid To :" + pt);
+			System.out.println("By Card number : " + num);
+			System.out.println("Expire month : " + month);
+			System.out.println("Expire year : " + year);
+			System.out.println("-----------------------------------------------------------------------");
 		}else {
 			System.out.print("Payment failed");
 		}
@@ -53,7 +53,7 @@ class paymentmethod  extends Payment{
 		void upiPayment() {
 			System.out.println("\n Entear Details");
 			System.out.println("Enter UPI Number : ");
-			double num = sc.nextDouble();
+			long num = sc.nextLong();
 			System.out.println("Enter amount to be paid : ");
 			int am = sc.nextInt();
 			System.out.println("Enter the PIN : ");
@@ -64,7 +64,7 @@ class paymentmethod  extends Payment{
 		void debitcardPayment() {
 			System.out.println("\n Entear Details");
 			System.out.println("Enter Card  Number :");
-			double num = sc.nextDouble();
+			long num = sc.nextLong();
 			System.out.println("Enter amount to be paid : ");
 			int am = sc.nextInt();
 			System.out.println("Enter the CVV : ");
@@ -80,9 +80,9 @@ class paymentmethod  extends Payment{
 			System.out.println("\n Entear Details");
 			System.out.println("Enter the name on the card : ");
 			String name = sc.nextLine();
-		 sc.nextLine();
+            sc.nextLine();
 			System.out.println("Enter Card  Number :");
-			double num = sc.nextDouble();
+			long num = sc.nextLong();
 			System.out.println("Enter amount to be paid : ");
 			int am = sc.nextInt();
 			System.out.println("Enter the CVV : ");
@@ -102,8 +102,8 @@ public class OnlinePayment {
 		Scanner sc = new Scanner(System.in);
 		Payment ob1 = new Payment();
 		paymentmethod ob = new paymentmethod();		
-		System.out.print("Select the mode of payment :\n"
-				+ "1 for UPI \n 2 for Debit Card \n 3 foe Credit Card");
+		System.out.println("Select the mode of payment :\n"
+				+ " 1 for UPI \n 2 for Debit Card \n 3 foe Credit Card");
 		int input = sc.nextInt();
 		switch(input) {
 		case 1:
