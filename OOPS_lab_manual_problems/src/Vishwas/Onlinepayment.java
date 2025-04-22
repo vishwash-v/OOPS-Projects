@@ -46,6 +46,7 @@ class Payment{
 			System.out.print("Payment failed");
 		}
 	}
+}
 	
 class paymentmethod  extends Payment{
 		Scanner sc = new Scanner(System.in);
